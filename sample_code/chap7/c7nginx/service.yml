@@ -8,5 +8,7 @@ spec:
   ports:
   - port: 80
     targetPort: http
-    nodePort: 30000
+    # 外部から接続するときのポート番号指定
+    nodePort: 30100
+  # ノード外部から接続できるサービスタイプ。※ClusterIPはポッド間通信のみ。LoadBalancerはノード外部から接続できロードバランサー機能もある。
   type: NodePort
